@@ -5,9 +5,9 @@ import java.util.*;
 
 
 public class Flood {
+    public static void flood1(WaterColor color, LinkedList<Coord> flooded_list, Tile[][] tiles, Integer board_size) {
+        //O(n) time complexity
 
-    // Students implement this flood function.
-    public static void flood(WaterColor color, LinkedList<Coord> flooded_list, Tile[][] tiles, Integer board_size) {
         LinkedList<Coord> queue = new LinkedList<>();
         boolean[][] visited = new boolean[board_size][board_size];
 
@@ -29,8 +29,9 @@ public class Flood {
         }
     }
 
-    // An alternative implementation goes here.
-    public static void flood1(WaterColor color, LinkedList<Coord> flooded_list, Tile[][] tiles, Integer board_size) {
+    public static void flood(WaterColor color, LinkedList<Coord> flooded_list, Tile[][] tiles, Integer board_size) {
+        //O(n) time complexity
+
         boolean[][] visited = new boolean[board_size][board_size];
 
         for (Coord coord : flooded_list) {
